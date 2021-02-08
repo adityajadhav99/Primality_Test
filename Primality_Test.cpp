@@ -2,11 +2,12 @@
 #include<cmath>
 using namespace std;
 
-// isPrime is a function to test Primality
+// isPrime is a function to test Primality and returns a Boolean Value to the Main Function
 ///////////////////////////////////////////////////////////////////////////////////////
 
 bool isPrime(int n){
     bool result = true;
+// Checking the divisibility by 2, 3;
     if(n%2==0 || n%3==0){
         if (n == 2 || n == 3)
         {
@@ -16,6 +17,7 @@ bool isPrime(int n){
         result = false;
         return result;
     }
+// Checking the divisibility by 6k +-1 integers;
     int i = 1;
     while (pow(6*i+1,2) <= n)
     {
